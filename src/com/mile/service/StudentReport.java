@@ -1,3 +1,8 @@
+/*
+	A simple java program to calculate grade based on the marks. 
+	It consist of some getter setter methods , exception handling , grade logic and constructors.
+*/
+
 package com.mile.service;
 
 import com.mile.exception.NullMarksArrayException;
@@ -8,18 +13,18 @@ import com.mile1.bean.Student;
 public class StudentReport {
 	
 	public String findGrade(Student studentObject) {
-		String x="";
+		String str="";
 		int arr[] = studentObject.getMarks();
 		int sum = 0;
 		for(int i:arr) {
-			if(i<35) {  x="F"; return x;	} 
+			if(i<35) {  str="F"; return str;	} 
 			sum += i;}
 		
-		if(sum<=150) {x="D";}
-		else if(sum>150&&sum<=200) {x="C"; }
-		else if(sum>200&&sum<=250) {x="B"; }
-		else if (sum>250&&sum<=300) {x="A"; }
-				return x;
+		if(sum<=150) {str="D";}
+		else if(sum>150&&sum<=200) {str="C"; }
+		else if(sum>200&&sum<=250) {str="B"; }
+		else if (sum>250&&sum<=300) {str="A"; }
+				return str;
 		
 		
 		}
@@ -57,7 +62,6 @@ public class StudentReport {
 					
 				}
 				
-			
 		}
 		return count;
 		
@@ -67,12 +71,12 @@ public class StudentReport {
 		int count = 0 ;
 		for(int i = 0; i < data.length ; i++) {
 			try {
-				if(data[i]==null) { count ++ ;} }
+				if(data[i]==null) 
+				count ++ ; 
+			}
 				catch(NullPointerException e) {
 					 
-				}
-				
-			
+			}
 		}
 		return count;
 		
@@ -81,3 +85,5 @@ public class StudentReport {
 	
 		
 }
+
+
